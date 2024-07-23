@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
+import Logo from '@/components/image/BMS_logo-1.webp'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -18,8 +20,11 @@ const Header = () => {
     >
       <nav className="container mx-auto px-6 py-3">
         <div className="flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold text-gray-200">
-            Logo
+          
+          <Link href="/" className=" flex flex-row  text-2xl font-bold text-gray-200">
+          <Image src={Logo} alt='logo' className='w-20 h-10'/>
+          Brains Media Solutions
+          
           </Link>
           
           {/* Desktop Menu */}

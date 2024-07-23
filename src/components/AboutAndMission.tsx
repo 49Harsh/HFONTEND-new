@@ -55,7 +55,7 @@ const AboutAndMission: React.FC = () => {
               />
             </div>
             <div>
-              <h3 className="text-3xl font-bold mb-4 text-white">Our Story</h3>
+              <h3 className="text-3xl font-bold mb-4 text-white">Brains Media Solutions Story</h3>
               <p className="text-gray-300 mb-6">
                 Founded in 2010, our company has grown from a small startup to a leading digital agency. We've helped hundreds of businesses transform their online presence and achieve their goals.
               </p>

@@ -7,7 +7,7 @@ const Footer = () => {
 
   const socialLinks = [
     { icon: FaGithub, href: 'https://github.com/49Harsh', label: 'GitHub' },
-    { icon: FaGlobe, href: 'https://harsh-org-portfolio.netlify.app/', label: 'Portfolio' },
+    { icon: FaGlobe, href: 'https://brainsmediasolutions.com/', label: 'Portfolio' },
     { icon: FaPhone, href: 'tel:+919569935133', label: 'Phone' },
   ];
 
@@ -35,12 +35,14 @@ const Footer = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
+            <h1>Brains Media Solutions </h1>
             {socialLinks.map((link, index) => (
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
+                
                 <Link href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.label}>
                   <link.icon className="text-2xl hover:text-blue-400 transition-colors duration-300" />
                 </Link>
