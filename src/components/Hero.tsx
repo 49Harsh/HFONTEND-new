@@ -1,133 +1,68 @@
-import { motion } from 'framer-motion'
-import { Button } from '@/components/ui/button'
-import { useEffect, useState, useRef } from 'react'
-import Image from 'next/image'
-import Heroimage from '@/components/image/webimage.jpg'
-
-interface Particle {
-  id: number
-  baseX: number
-  baseY: number
-  color: string
-}
-
-const Particle: React.FC<{ x: number; y: number; color: string }> = ({ x, y, color }) => (
-  <motion.div
-    className="absolute w-3 h-3 rounded-full"
-    style={{ 
-      backgroundColor: color,
-      left: x,
-      top: y
-    }}
-    animate={{ x, y }}
-    transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-  />
-)
+import React from 'react';
+import Image from 'next/image';
+import Frame1 from '@/components/image/Group 1.png'
 
 const Hero: React.FC = () => {
-  const [particles, setParticles] = useState<Particle[]>([])
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const heroRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    if (heroRef.current) {
-      const { width, height } = heroRef.current.getBoundingClientRect()
-      const newParticles: Particle[] = Array.from({ length: 30 }, (_, i) => ({
-        id: i,
-        baseX: Math.random() * width,
-        baseY: Math.random() * height,
-        color: `hsl(${Math.random() * 360}, 100%, 70%)`
-      }))
-      setParticles(newParticles)
-    }
-  }, [])
-
-  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
-    if (!heroRef.current) return
-    const rect = heroRef.current.getBoundingClientRect()
-    setMousePosition({
-      x: event.clientX - rect.left,
-      y: event.clientY - rect.top
-    })
-  }
-
-  const handleMouseLeave = () => {
-    setMousePosition({ x: 0, y: 0 })
-  }
-
   return (
-    <section 
-      ref={heroRef} 
-      id="home" 
-      className="bg-gradient-to-br from-indigo-900 via-blue-900 to-purple-900 relative overflow-hidden min-h-screen flex items-center justify-center"
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-    >
-      {particles.map((particle) => {
-        const x = mousePosition.x !== 0 
-          ? particle.baseX + (mousePosition.x - particle.baseX) * 0.1
-          : particle.baseX
-        const y = mousePosition.y !== 0 
-          ? particle.baseY + (mousePosition.y - particle.baseY) * 0.1
-          : particle.baseY
-        return (
-          <Particle 
-            key={particle.id} 
-            x={x}
-            y={y}
-            color={particle.color}
-          />
-        )
-      })}
-      {/* Rest of your Hero content */}
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center"
-        >
-          <div className='flex flex-col lg:flex-row items-center justify-between p-8 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl shadow-2xl'>
-            <div className='flex flex-col justify-center items-center lg:items-start lg:w-1/2 mb-8 lg:mb-0'>
-              <motion.h1 
-                className="text-4xl md:text-6xl font-bold mb-7 text-white"
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >
-                Welcome to Our Landing Page
-              </motion.h1>
-              <motion.p 
-                className="text-xl mb-8 text-gray-300"
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >
-                Discover amazing features and boost your productivity
-              </motion.p>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-              >
-                <Button className='bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105 hover:shadow-lg' size="lg">
-                  Get Started
-                </Button>
-              </motion.div>
-            </div>
-            <motion.div 
-              className='lg:w-1/2'
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              <Image src={Heroimage} width={450} height={400} alt='Hero image' className='rounded-lg shadow-2xl' priority />
-            </motion.div>
+    <div className="bg-[#F2F4F7] min-h-screen overflow-hidden w-screen">
+      <div className=" flex lg:flex-row  relative w-full h-full ">
+        {/* Left Column */}
+        <div className="lg:w-1/2 ml-32 pr-8 pt-28 mb-8 lg:mb-0">
+          <h1 className="text-4xl lg:text-5xl font-bold text-black mb-4">
+            <span className="text-yellow-400">User-Centric Excellence:</span> Our App Development services Tackles Your Pain Points
+          </h1>
+          <p className="mb-6 text-lg text-gray-700 mt-2">
+            Experience a Seamless Digital Journey with <span className="text-green-600">Desun</span> - Where Every Line of Code Resolves Your Challenges and <span className="text-yellow-400">Elevates Your App Experience</span> to Unparalleled Heights.
+          </p>
+          
+          {/* Contact Form */}
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h2 className="text-lg font-semibold mb-4 text-gray-800">
+              Leave your contacts and we will call you back within 30 minutes
+            </h2>
+            <form>
+              <div className='flex flex-row'>
+              <div className="grid grid-cols-2 gap-4 mb-4">
+                <div>
+                  <label htmlFor="fullName" className="block text-sm font-medium text-gray-700">Full name</label>
+                  <input type="text" id="fullName" name="fullName" placeholder="My Name" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500" />
+                </div>
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone number</label>
+                  <div className="flex">
+                    <span className="inline-flex items-center px-3 rounded-l-md   text-gray-500 text-sm">
+                      🇮🇳 +91
+                    </span>
+                    <input type="tel" id="phone" name="phone" placeholder="0000000000" className="mt-1 block w-full rounded-r-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500" />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="businessName" className="block text-sm font-medium text-gray-700">Business name</label>
+                  <input type="text" id="businessName" name="businessName" placeholder="ABC Technologies PVT LTD" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500" />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">Business mail</label>
+                  <input type="email" id="email" name="email" placeholder="demoaccount@gmail.com" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500" />
+                </div>
+              </div>
+              <div className='flex flex-row justify-end items-end '>
+              <button type="submit" className="w-[200px] h-14  bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition duration-300">
+                Get consultation
+              </button>
+              </div>
+              </div>
+              
+            </form>
           </div>
-        </motion.div>
+        </div>
+        
+        {/* Right Column */}
+        <div className="lg:w-1/2  absolute right-0 top-0 ">
+          <Image src={Frame1}  alt='App-screenshots' className=" absolute right-0 top-0 " />
+        </div>
       </div>
-    </section>
-  )
-}
+    </div>
+  );
+};
 
-export default Hero
+export default Hero;

@@ -1,6 +1,5 @@
 'use client'
 
-import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import Features from '@/components/Features'
 import ContactForm from '@/components/ContactForm'
@@ -10,16 +9,20 @@ import Footer from '@/components/Footer'
 import ServicesPage from '@/components/Services'
 import Slider from '@/components/Slider'
 import AboutAndMission from '@/components/AboutAndMission'
+import Navbar from '@/components/Navbar'
+import ContactPage from '@/components/ContactPage'
 
 export default function Home() {
   useSmoothScroll()
 
   return (
-    <main >
-      <Header />
+    <main className='overflow-hidden bg-white' >
+      <Navbar />
       <Hero />
-      <GradientDivider />
       <ServicesPage />
+      <ContactPage/>
+      {/* 
+      
       <GradientDivider />
       <Slider />
       <GradientDivider />
@@ -29,7 +32,7 @@ export default function Home() {
       <GradientDivider />
       <ContactForm />
       <GradientDivider />
-      <Footer />
+      <Footer /> */}
     </main>
   )
 }
