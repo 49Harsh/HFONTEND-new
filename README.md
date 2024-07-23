@@ -1,3 +1,30 @@
+
+<!-- here is the details about project -->
+
+For this project, I utilized Next.js  as the primary framework, along with TypeScripts, Tailwind CSS for styling and Shadcn for UI  components. To enhance the user experience, I incorporated various animations using Framer Motion.
+
+Some of the key features I implemented include:
+
+1. A particle animation that follows the mouse cursor
+2. Box animation on the contact page
+3. Several other dynamic elements throughout the site
+
+Deploy-Link = https://main--iridescent-kulfi-c01a35.netlify.app/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -34,3 +61,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+
+
+
+
+
+
+
+
