@@ -2,15 +2,16 @@
 
 import Hero from '@/components/Hero'
 import Features from '@/components/Features'
-import ContactForm from '@/components/ContactForm'
+
 import { useSmoothScroll } from '@/hooks/useSmootScroll'
 import GradientDivider from '@/components/GradientDivider'
 import Footer from '@/components/Footer'
 import ServicesPage from '@/components/Services'
 import Slider from '@/components/Slider'
-import AboutAndMission from '@/components/AboutAndMission'
 import Navbar from '@/components/Navbar'
 import ContactPage from '@/components/ContactPage'
+import DiscussProject from '@/components/DiscussProject'
+import VisionPage from '@/components/VisionPage'
 
 export default function Home() {
   useSmoothScroll()
@@ -21,6 +22,8 @@ export default function Home() {
       <Hero />
       <ServicesPage />
       <ContactPage/>
+      <DiscussProject/>
+      <VisionPage/>
       {/* 
       
       <GradientDivider />

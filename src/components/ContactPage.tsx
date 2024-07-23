@@ -20,7 +20,7 @@ const industries = [
   { icon: '🎓', name: 'Online courses' },
 ];
 
-const ContackPage = () => {
+const ContactPage = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 py-16 bg-white">
       <h2 className="text-4xl font-bold text-black mb-8 w-[50%]">
@@ -58,17 +58,17 @@ const ContackPage = () => {
             <span className="text-blue-600">Business analysis</span> / <span className="text-blue-600">iOS</span> / <span className="text-blue-600">Android</span> / <span className="text-blue-600">QA</span> / <span className="text-blue-600">UI/UX Design</span>
           </div>
           <div className="flex items-center mb-4">
-            <span className="mr-4">🌍 India</span>
-            <span>🏠 Real Estate</span>
+            <span className="mr-4 text-gray-700">🌍 India</span>
+            <span className='text-gray-700'>🏠 Real Estate</span>
           </div>
           <div className="flex mb-4">
             <div className="mr-8">
-              <div className="text-2xl font-bold">400%</div>
-              <div>User Growth</div>
+              <div className="text-2xl font-bold text-black">400%</div>
+              <div className='text-gray-700'>User Growth</div>
             </div>
             <div>
-              <div className="text-2xl font-bold">+ 200 000</div>
-              <div>Active Users</div>
+              <div className="text-2xl text-black font-bold">+ 200 000</div>
+              <div className='text-gray-700'>Active Users</div>
             </div>
           </div>
           <div className="flex">
@@ -84,4 +84,4 @@ const ContackPage = () => {
   );
 };
 
-export default ContackPage;
+export default ContactPage;
