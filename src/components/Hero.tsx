@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
       initial={{ opacity: 0 }} 
       animate={{ opacity: 1 }} 
       transition={{ duration: 0.5 }}
-      className="bg-[#F2F4F7] min-h-screen overflow-hidden w-full"
+      className="bg-[#F2F4F7] min-h-screen  overflow-hidden w-full"
     >
       <div className="flex flex-col lg:flex-row relative w-full h-full">
         {/* Left Column */}
@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="w-full lg:w-1/2 px-4 lg:ml-32 lg:pr-8 pt-8 lg:pt-28 mb-8"
+          className="w-full lg:w-1/2 px-4 lg:ml-32 lg:pr-8 pt-8 mt-14 lg:mt-4 lg:pt-28 mb-8"
         >
           <h1 className="text-3xl lg:text-5xl font-bold text-black mb-4">
             <span className="text-yellow-400">User-Centric Excellence:</span> Our App Development services Tackles Your Pain Points
