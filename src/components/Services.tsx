@@ -24,7 +24,7 @@ const mobileTechnologies = [
 
 const ServicesPage: React.FC = () => {
   return (
-    <div id='services' className="bg-white w-full mx-auto px-4 py-8">
+    <div id='services' className="container bg-white w-full mx-auto px-4 py-8">
       <div className="flex justify-between mb-8">
         <Image src={planet} alt='pl' loading='lazy'/>
       </div>

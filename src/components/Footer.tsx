@@ -52,9 +52,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        {/* <div className="text-center mt-8">
-          <p className="text-sm">We work throughout the world</p>
-        </div> */}
+        
       </div>
     </motion.footer>
     </div>
