@@ -71,14 +71,14 @@ export default function DiscussProject() {
         transition={pageTransition}
       >
         <motion.div className="max-w-6xl w-full flex flex-col md:flex-row items-center py-10" variants={containerVariants}>
-          <motion.div className="md:w-1/2 text-white p-8" variants={containerVariants}>
-            <motion.h1 className="text-5xl font-bold mb-4" variants={itemVariants}>Let's discuss<br />Your project</motion.h1>
-            <motion.p className="text-xl" variants={itemVariants}>Let's figure out how to create an effective application,<br />its cost and terms of its development</motion.p>
+          <motion.div className="w-full md:w-1/2 text-white p-4 md:p-8 text-center md:text-left mb-8 md:mb-0" variants={containerVariants}>
+            <motion.h1 className="text-4xl md:text-5xl font-bold mb-4" variants={itemVariants}>Let's discuss<br />Your project</motion.h1>
+            <motion.p className="text-lg md:text-xl" variants={itemVariants}>Let's figure out how to create an effective application,<br className="hidden md:inline" />its cost and terms of its development</motion.p>
           </motion.div>
-          <motion.div className="md:w-1/2" variants={containerVariants}>
-            <motion.div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md" variants={itemVariants}>
+          <motion.div className="w-full md:w-1/2" variants={containerVariants}>
+            <motion.div className="bg-white rounded-lg shadow-lg p-6 md:p-8 w-full max-w-md mx-auto" variants={itemVariants}>
               <form onSubmit={handleSubmit} className="space-y-4">
-                <motion.div className="grid grid-cols-2 gap-4" variants={containerVariants}>
+                <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-4" variants={containerVariants}>
                   <motion.div variants={itemVariants}>
                     <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-1">Full name</label>
                     <input
@@ -111,7 +111,7 @@ export default function DiscussProject() {
                     </div>
                   </motion.div>
                 </motion.div>
-                <motion.div className="grid grid-cols-2 gap-4" variants={containerVariants}>
+                <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-4" variants={containerVariants}>
                   <motion.div variants={itemVariants}>
                     <label htmlFor="businessName" className="block text-sm font-medium text-gray-700 mb-1">Business name</label>
                     <input

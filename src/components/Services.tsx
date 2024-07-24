@@ -25,45 +25,41 @@ const mobileTechnologies = [
 const ServicesPage: React.FC = () => {
   return (
     <div id='services' className="container bg-white w-full mx-auto px-4 py-8">
-      <div className="flex justify-between mb-8">
-        <Image src={planet} alt='pl' loading='lazy'/>
+      <div className="flex justify-center mb-8">
+        <Image src={planet} alt='pl' loading='lazy' className="w-full"/>
       </div>
-
-
       
-      <div className='mx-20 '>
-      <div>
-      <h1 className="text-4xl text-black font-bold w-[85%] mb-8">Full development cycle</h1>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-32">
-        <div>
-          <h2 className="text-xl text-slate-800 font-semibold mb-4">We use proven technologies</h2>
-          
-          <div className="mb-6">
-            <h3 className="font-semibold text-black mb-2">Web</h3>
-            <p className="text-sm text-slate-700">{webTechnologies.join(' / ')}</p>
-          </div>
-          
-          <div>
-            <h3 className="font-semibold mb-2 text-black">Mobile</h3>
-            <p className="text-sm text-slate-700">{mobileTechnologies.join(' / ')}</p>
-          </div>
-        </div>
+      <div className='mx-4 sm:mx-8 md:mx-16 lg:mx-20'>
+        <h1 className="text-3xl sm:text-4xl text-black font-bold w-full sm:w-[85%] mb-8">Full development cycle</h1>
         
-        <div className='ml-20'>
-          {services.map((service, index) => (
-            <div key={index} className="mb-4">
-              <a href={service.link} className="text-black hover:underline flex items-center">
-                {service.name}
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-32">
+          <div>
+            <h2 className="text-xl text-slate-800 font-semibold mb-4">We use proven technologies</h2>
+            
+            <div className="mb-6">
+              <h3 className="font-semibold text-black mb-2">Web</h3>
+              <p className="text-sm text-slate-700">{webTechnologies.join(' / ')}</p>
             </div>
-          ))}
+            
+            <div>
+              <h3 className="font-semibold mb-2 text-black">Mobile</h3>
+              <p className="text-sm text-slate-700">{mobileTechnologies.join(' / ')}</p>
+            </div>
+          </div>
+          
+          <div className='mt-8 lg:mt-0 lg:ml-20'>
+            {services.map((service, index) => (
+              <div key={index} className="mb-4">
+                <a href={service.link} className="text-black hover:underline flex items-center">
+                  {service.name}
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-      </div>
       </div>
     </div>
   );
