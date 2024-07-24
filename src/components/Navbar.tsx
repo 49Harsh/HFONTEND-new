@@ -21,16 +21,13 @@ const Navbar = () => {
           {/* Navigation Links */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              {['Services', 'Media', 'Cases', 'FAQ', 'Contacts'].map((item) => (
-                <Link 
-                  key={item}
-                  href={`/${item.toLowerCase()}`}
-                  className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  {item}
-                </Link>
-              ))}
-            </div>
+              
+              <Link href="#services" className="text-gray-400 hover:text-gray-100">Services</Link>
+              <Link href="#media" className="text-gray-400 hover:text-gray-100">Media</Link>
+              <Link href="#cases" className="text-gray-400 hover:text-gray-100">Cases</Link>
+              <Link href="#faq" className="text-gray-400 hover:text-gray-100">FAQ</Link>
+              <Link href="#footer" className="text-gray-400 hover:text-gray-100">Footer</Link>
+              </div>
           </div>
           
           {/* Contact Info */}

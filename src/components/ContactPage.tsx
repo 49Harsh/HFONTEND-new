@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import double from '@/components/image/image 15.png'
+import appstore from '@/components/image/app-store.png'
+import playstore from '@/components/image/google-play.png'
 
 const industries = [
   { icon: '📱', name: 'Social media' },
@@ -22,7 +24,7 @@ const industries = [
 
 const ContactPage = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-16 bg-white">
+    <div id='cases' className="max-w-6xl mx-auto px-4 py-16 bg-white">
       <h2 className="text-4xl font-bold text-black mb-8 w-[50%]">
         Developed more than <span className="text-green-500">100</span> projects in <span className="text-green-500">15</span> industries
       </h2>
@@ -72,8 +74,8 @@ const ContactPage = () => {
             </div>
           </div>
           <div className="flex">
-            <Image src="/app-store.png" alt="App Store" width={120} height={40} className="mr-4" />
-            <Image src="/google-play.png" alt="Google Play" width={120} height={40} />
+            <Image src={appstore} alt="App Store" width={120} height={40} className="mr-4" />
+            <Image src= {playstore} alt="Google Play" width={120} height={40} />
           </div>
         </div>
         <div className="w-1/2">
