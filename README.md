@@ -9,7 +9,7 @@ Some of the key features I implemented include:
 2. Box animation on the contact page
 3. Several other dynamic elements throughout the site
 
-Deploy-Link = https://main--iridescent-kulfi-c01a35.netlify.app/
+Deploy-Link = https://next-js-animation-portfolio-water.netlify.app/
 
 
 
